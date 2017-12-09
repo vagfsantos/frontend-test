@@ -1,7 +1,18 @@
+*, *:after, *:before{
+  box-sizing: border-box;
+}
+
 body{
   background-color: #272727;
+  font-family: 'Montserrat', sans-serif;
+  color: #272727;
 
   @media screen and (max-width: 768px){
     padding: 0 20px;
   }
+}
+
+img{
+  max-width: 100%;
+  height: auto;
 }
