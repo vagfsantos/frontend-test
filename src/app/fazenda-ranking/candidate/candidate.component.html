@@ -8,6 +8,6 @@
   <figcaption class="candidate__description">
     <h2 [innerHTML]="candidate.name"></h2>
     <p [innerHTML]="candidate.description"></p>
+    <app-rating [candidate]="candidate" [isOpened]="showRating"></app-rating>
   </figcaption>
-  <app-rating [candidate]="candidate" [isOpened]="showRating"></app-rating>
 </figure>

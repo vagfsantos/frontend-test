@@ -10,10 +10,22 @@ $color-highlight: #ba3638;
   visibility: hidden;
   transition: .2s ease-in-out;
 
+  @media screen and (max-width: 768px) {
+    position: static;
+  }
+
   &.opened{
     opacity: 1;
     left: 100%;
     visibility: visible;
+  }
+
+  @media screen and (max-width: 768px) {
+    opacity: 1;
+    visibility: visible;
+    margin: 10px 0 0 0;
+    transform: none;
+    clear: both;
   }
 
   &:after{
@@ -31,11 +43,19 @@ $color-highlight: #ba3638;
     top: 0;
     bottom: 0;
     margin: auto 0;
+
+    @media screen and (max-width: 768px) {
+      display: none;
+    }
   }
 
   div{
     border-radius: 4px;
     overflow: hidden;
+
+    @media screen and (max-width: 768px) {
+      border-radius: 0;
+    }
   }
 
   table{
@@ -45,6 +65,13 @@ $color-highlight: #ba3638;
     border: 0;
     border-spacing: 0;
     text-align: center;
+
+    @media screen and (max-width: 768px) {
+      width: 100%;
+      min-height: none;
+      border: 1px solid #c7c7c7;
+      border-collapse: collapse;
+    }
   }
 
   th{
@@ -65,12 +92,13 @@ $color-highlight: #ba3638;
 
   th,td{
     vertical-align: middle;
-
-    &:first-child{
-      border-right: 1px solid #8c8b8b;
-    }
-    &:last-child{
-      border-left: 1px solid rgba(#f8f7f7, 0.3);
+    @media screen and (min-width: 768px) {
+      &:first-child{
+        border-right: 1px solid #8c8b8b;
+      }
+      &:last-child{
+        border-left: 1px solid rgba(#f8f7f7, 0.3);
+      }
     }
   }
 }
