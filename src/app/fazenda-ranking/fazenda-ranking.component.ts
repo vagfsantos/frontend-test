@@ -11,6 +11,8 @@ export class FazendaRankingComponent implements OnInit {
   private candidates: any;
   private apiDataNotFound: boolean;
 
+  private headerTitle = "Ranking";
+
   constructor(private http: Http) { }
 
   ngOnInit() {
