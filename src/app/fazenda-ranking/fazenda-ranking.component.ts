@@ -9,6 +9,7 @@ import 'rxjs/add/operator/map';
 })
 export class FazendaRankingComponent implements OnInit {
   private candidates: any;
+  private apiDataNotFound: boolean;
 
   constructor(private http: Http) { }
 
@@ -23,7 +24,34 @@ export class FazendaRankingComponent implements OnInit {
   }
 
   private setCandidates(apiData: any){
+    if( !apiData.data ) {
+      this.onApiDataNotFound();
+      return;
+    }
 
+    this.candidates = apiData.data.map( candidate => {
+      return this.setCandidateVotePercetage(candidate);
+    })
   }
 
+  private setCandidateVotePercetage(candidate) {
+    if( candidate.positive &&  candidate.negative ) {
+      let totalVotes = parseInt(candidate.positive, 10) + parseInt(candidate.negative, 10);
+      let positivePercentage: any = (( candidate.positive * 100) / totalVotes ).toFixed(2);
+      positivePercentage = parseFloat(positivePercentage);
+      let negativePercentage = 100 - positivePercentage;
+
+      candidate.positivePercentage = positivePercentage;
+      candidate.negativePercentage = negativePercentage;
+
+      return candidate;
+    }
+
+    candidate.hasNoCalculatedValue = true;
+    return candidate;
+  }
+
+  private onApiDataNotFound() {
+    this.apiDataNotFound = true;
+  }
 }
