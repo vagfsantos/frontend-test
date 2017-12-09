@@ -1,4 +1,4 @@
-<figure class="candidate" [class.even]="isEven">
+<figure class="candidate" [class.even]="isEven" (mouseenter)="onShowRating($event)" (mouseleave)="onHideRating($event)">
   <div class="candidate__picture">
     <div>
       <img src="{{ candidate.picture }}" alt="{{ candidate.name }}">
@@ -9,4 +9,5 @@
     <h2 [innerHTML]="candidate.name"></h2>
     <p [innerHTML]="candidate.description"></p>
   </figcaption>
+  <app-rating [candidate]="candidate" [isOpened]="showRating"></app-rating>
 </figure>

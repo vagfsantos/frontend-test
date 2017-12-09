@@ -1,0 +1,25 @@
+<div class="rating" [class.opened]="isOpened">
+  <div>
+    <table>
+      <thead>
+        <tr>
+          <th class="first">Gostam</th>
+          <th>Não Gostam</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngIf="candidate.hasNoCalculatedValue;then whenHasNoVotes else whenHasVotes"></tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<ng-template #whenHasVotes>
+  <td class="first">{{candidate.positivePercentage + '%'}}</td>
+  <td>{{candidate.negativePercentage + '%'}}</td>
+</ng-template>
+
+<ng-template #whenHasNoVotes>
+  <td class="first">...</td>
+  <td>...</td>
+</ng-template>

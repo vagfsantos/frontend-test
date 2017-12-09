@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { FazendaRankingComponent } from './fazenda-ranking/fazenda-ranking.component';
 import { HeaderComponent } from './fazenda-ranking/header/header.component';
 import { CandidateComponent } from './fazenda-ranking/candidate/candidate.component';
+import { RatingComponent } from './fazenda-ranking/candidate/rating/rating.component';
 
 
 
@@ -15,7 +16,8 @@ import { CandidateComponent } from './fazenda-ranking/candidate/candidate.compon
     AppComponent,
     FazendaRankingComponent,
     HeaderComponent,
-    CandidateComponent
+    CandidateComponent,
+    RatingComponent
   ],
   imports: [
     BrowserModule,

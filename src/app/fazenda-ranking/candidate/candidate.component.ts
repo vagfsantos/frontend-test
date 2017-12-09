@@ -10,9 +10,18 @@ export class CandidateComponent implements OnInit {
   @Input() position: number;
   @Input() isEven: boolean;
 
+  private showRating: boolean = false;
+
   constructor() { }
 
   ngOnInit() {
   }
 
+  onShowRating(e) {
+    this.showRating = true;
+  }
+
+  onHideRating(e) {
+    this.showRating = false;
+  }
 }
