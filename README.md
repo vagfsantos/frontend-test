@@ -1,41 +1,27 @@
-### Sobre o R7.com
-O R7.com é um portal mantido pela Record TV, com 
-8 anos de vida. Possui mais de 50 milhões de visitantes únicos e 200 milhões de pageviews mensalmente e conta coma uma equipe de quase 300 pessoas.
+# FrontendTest
 
-### Teste FrontEnd para o R7.com!
-Essa teste consiste em entendermos um pouco mais sobre seus conhecimentos com HTML, CSS,
-JavaScript, Código responsivo, suporte a crossbrowser e lógica.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.5.5.
 
-### Orientações
-Primeiramente, faça um fork e clone do projeto;
-Crie uma branch (pode ser com seu nome mesmo) e depois instale as dependências:
+## Development server
 
-    npm install
+Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-Após isso, rode a aplicação:
+## Code scaffolding
 
-    npm start
+Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-Depois do seu setup você precisará seguir as seguintes instruções, para construir a aplicação:
+## Build
 
-1. Desenvolver a página, que tem o seu layout em **a-fazenda.psd**.(A única fonte usada foi a Montserrat, disponível no Google Fonts)
-2. Criar um JavaScript que faça a requisição para **/fazenda.json**
-  * Apresentar os dados requisitados pelo layout.
-  * Calcular a porcentagem de "positives" e "negatives".
-  * Ordernar os items do json a partir da porcentagem calculada acima.
-3.  **NÃO** alterar o arquivo **fazenda.json**. Em hipótese nenhuma!
-4. Se for preciso modificar a estrutura e workflow, atualizar o README.
-5. Submeta o Pull Request e envie um email para apinto@rederecord.com.br :D
-<br>
+Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
 
-### Requisitos obrigatórios
-1. Escreva o código com BackboneJS, Angular ou VanillaJS que nós iremos avaliar do mesmo jeito! ;)
-2. Utilizar um pré-processador CSS de sua preferência.
-3. Testes e documentação.
-4. Automatização. (Gulp? Grunt? :D)
-5. Template Engines (underscore, mustache, ou outras de sua preferência)
-6. Ser fiel ao .psd.
-7. Suporte para IE9+ (crossbrowser web / mobile - Responsivo).
-8. Não usar geradores como yeoman, procure manter a estrutura do projeto.
+## Running unit tests
 
-<br><br><sub>Os dados presentes neste teste são totalmente fictícios.</sub>
+Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+
+## Running end-to-end tests
+
+Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+
+## Further help
+
+To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
