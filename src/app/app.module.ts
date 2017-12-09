@@ -3,11 +3,13 @@ import { NgModule } from '@angular/core';
 
 
 import { AppComponent } from './app.component';
+import { FazendaRankingComponent } from './fazenda-ranking/fazenda-ranking.component';
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    FazendaRankingComponent
   ],
   imports: [
     BrowserModule
