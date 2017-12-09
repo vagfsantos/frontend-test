@@ -32,6 +32,8 @@ export class FazendaRankingComponent implements OnInit {
     this.candidates = apiData.data.map( candidate => {
       return this.setCandidateVotePercetage(candidate);
     })
+
+    this.orderCanditatesByPositiveValues();
   }
 
   private setCandidateVotePercetage(candidate) {
@@ -49,6 +51,17 @@ export class FazendaRankingComponent implements OnInit {
 
     candidate.hasNoCalculatedValue = true;
     return candidate;
+  }
+
+  private orderCanditatesByPositiveValues() {
+    this.candidates.sort( (candidateA, candidateB) => {
+      let positiveVotesA = candidateA.positivePercentage || 0;
+      let positiveVotesB = candidateB.positivePercentage || 0;
+
+      if( positiveVotesA > positiveVotesB ) return -1;
+      if( positiveVotesA < positiveVotesB ) return 1;
+      return 0;
+    });
   }
 
   private onApiDataNotFound() {
